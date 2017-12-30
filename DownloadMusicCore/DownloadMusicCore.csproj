@@ -44,8 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DownloadManager.cs" />
+    <Compile Include="HtmlLoader.cs" />
     <Compile Include="InformationMusic.cs" />
     <Compile Include="IParser.cs" />
+    <Compile Include="IParserSettings.cs" />
     <Compile Include="ParserWorker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
