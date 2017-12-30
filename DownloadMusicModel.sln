@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadMusicModel", "DownloadMusicModel\DownloadMusicModel.csproj", "{AB439834-01FB-43C4-AA6A-D08F93604CDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DownloadMusicCore", "DownloadMusicCore\DownloadMusicCore.csproj", "{05E14D0B-4A47-4481-8F71-E49AC50B2189}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AB439834-01FB-43C4-AA6A-D08F93604CDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB439834-01FB-43C4-AA6A-D08F93604CDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB439834-01FB-43C4-AA6A-D08F93604CDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05E14D0B-4A47-4481-8F71-E49AC50B2189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05E14D0B-4A47-4481-8F71-E49AC50B2189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05E14D0B-4A47-4481-8F71-E49AC50B2189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05E14D0B-4A47-4481-8F71-E49AC50B2189}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
