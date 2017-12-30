@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DownloadMusicCore
 {
-    public class DownloadManager
+    public interface IDownloadManager
     {
+
+    }
+    public class DownloadManager : IDownloadManager
+    {
+
     }
 }
+ 
