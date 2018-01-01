@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace DownloadMusicCore
 {
-    public class DownloadManager : IDownloadManager
+    public interface IDownloadManager
     {
 
     }
 }
- 

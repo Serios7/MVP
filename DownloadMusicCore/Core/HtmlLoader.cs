@@ -6,22 +6,22 @@ namespace DownloadMusicCore
 {
     class HtmlLoader
     {
-        readonly WebClient webClient;
-        readonly string url;
+        readonly WebClient WebClient;
+        readonly string Url;
 
         public HtmlLoader(IParserSettings settings)
         {
-            webClient = new WebClient()
+            WebClient = new WebClient()
             {
                 Encoding = Encoding.UTF8
             };
-            url = $"{settings.BaseUrl}{settings.Search}{settings.PageNumber}";
+            Url = $"{settings.BaseUrl}{settings.Search}{settings.PageNumber}";
         }
 
         public async Task<string> GetSourceBySearch(string search, int pageNumber)
         {
-            var currentUrl = url.Replace("{search}", search).Replace("{pageNumber}", pageNumber.ToString());
-            return await webClient.DownloadStringTaskAsync(currentUrl);
+            var currentUrl = Url.Replace("{search}", search).Replace("{pageNumber}", pageNumber.ToString());
+            return await WebClient.DownloadStringTaskAsync(currentUrl);
         }
     }
 }
