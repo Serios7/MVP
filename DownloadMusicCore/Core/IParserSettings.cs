@@ -2,7 +2,7 @@
 {
     interface IParserSettings
     {
-        string BaseUrl { get; set; }
+        string BaseUrl { get; }
 
         string Search { get; set; }
 

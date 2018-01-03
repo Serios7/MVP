@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AngleSharp.Dom.Html;
+using System.Text.RegularExpressions;
 
 namespace DownloadMusicCore.Zaycev
 {
@@ -13,10 +14,19 @@ namespace DownloadMusicCore.Zaycev
 
         List<InformationMusic> IParser<List<InformationMusic>>.Parse(IHtmlDocument document)
         {
-            OnNotFound?.Invoke();
-            
+            var itemsBlock = document.QuerySelectorAll("div.zaycev__block");            
+            var itemsTitle = itemsBlock.Select(s => s.GetElementsByClassName("light-link"));
+            var itemsRecord = itemsBlock.Select(s => s.GetElementsByClassName("result__snp"));
+            var itemsLink = itemsBlock.Select(s => s.GetElementsByClassName("light-link")
+                                      .Select(m => m.GetAttribute("href")));
+
+
+
+
+
+            OnNotFound?.Invoke();            
         }
     }
 }
 
- 
+  

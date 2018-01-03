@@ -1,6 +1,5 @@
 ﻿using AngleSharp.Parser.Html;
 using System;
-using AngleSharp.Dom.Html;
 
 namespace DownloadMusicCore
 {
@@ -46,10 +45,8 @@ namespace DownloadMusicCore
         {
             for(int i = ParserSettings.PageNumber; IsActive; i++)
             {
-                HtmlParser domParser = new HtmlParser();
                 string source = await HtmlLoader.GetSourceBySearch(ParserSettings.Search, ParserSettings.PageNumber);
-                IHtmlDocument document = await domParser.ParseAsync(source);
-                T result = Parser.Parse(document);
+                T result = Parser.Parse(await new HtmlParser().ParseAsync(source));
                 OnNewData?.Invoke(this, result);
             }
             OnCompleted?.Invoke(this);
